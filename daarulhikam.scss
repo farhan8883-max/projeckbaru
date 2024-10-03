@@ -108,6 +108,13 @@ form input:last-child{
 .home-content {
     max-width: 600px;
 }
+
+h1:hover {
+  color: var(--zain-color);
+  text-shadow: 1px 4px 1px white;
+  transition: .5s;
+}
+
  .home-content h1 {
    position: relative;
     font-size: 56px;
@@ -381,10 +388,14 @@ form input:last-child{
   display: flex;
   justify-content: center;
   background-color: var(--farhan-color);
-  padding: 3em;
+  padding: 2em;
+
  }h5 {
-  font-size: 4em;
+  font-size: 3em;
   color: #00abf0;
+ }
+
+ h5:hover {
   text-shadow: 2px 2px 2px white;
  }
 
@@ -440,8 +451,10 @@ form input:last-child{
 .yoy {
   padding: 2em;
   background-color: var(--farhan-color);
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 3rem;
 }
 .card {
   width: 400px;
@@ -553,6 +566,78 @@ div.card-container {
   box-sizing: border-box;
   font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: #081b29;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background-color: var(--zain-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem white;
+  font-size: 1rem;
+  color: #000000;
+  letter-spacing: .1rem;
+  font-weight: 200;
+  transition: .5s ease;
+}
+
+.btn:hover {
+  box-shadow: none;
+}
+
+.services {
+  padding: 2em;
+  background-color: var(--farhan-color);
+}
+
+.services h2 {
+  margin-bottom: 5rem;
+  color: var(--zain-color);
+}
+
+.services h2:hover {
+  text-shadow: 2px 2px 2px white;
+  transition: .5s;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  .services-box {
+    flex: 1 1 30rem;
+    background: var(--farhan-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--farrel-color);
+    transition: .5s ease;
+    &:hover {
+      border-color: var(--farhan-color);
+      transform: scale(1.02);
+    }
+  }
+}
+
+.services-box h3 {
+  color: aliceblue;
+} p {
+  color: aliceblue;
+}
+
+.services-box i{
+  font-size: 7rem;
+  color: var(--zain-color);
+}
+
+.services-box h3 {
+  font-size: 2.6rem;
+}
+
+.services-box p {
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
 }
 
  /*KEYFRAMES ANIMATION */
