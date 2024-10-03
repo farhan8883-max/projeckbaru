@@ -26,6 +26,8 @@ fieldset {
 }
 
 fieldset:hover {
+    transition: 2s;
+    border-radius: 2em;
     background-color:  blue;
 }
 
