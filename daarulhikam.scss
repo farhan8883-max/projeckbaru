@@ -33,6 +33,15 @@ body {
     z-index: 100;
 }
 
+a {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header:hover {
+  background-color: #081b29;
+  transition: .5s;
+}
+
 .logo {
    position: relative;
     font-size: 25px;
@@ -71,6 +80,21 @@ form {
   width: 380px;
   max-width: 100%;
   position: relative;
+}
+
+textarea:hover{
+  box-shadow: 5px 5px 5px white;
+  transition: .5s;
+}
+
+input:hover{
+  box-shadow: 5px 5px 5px white;
+  transition: .5s;
+}
+
+.send:hover{
+  box-shadow: 5px 5px 5px white;
+  transition: .5s;
 }
 
 form input:first-child{
@@ -397,6 +421,7 @@ h1:hover {
 
  h5:hover {
   text-shadow: 2px 2px 2px white;
+  transition:.5s;
  }
 
  .heading {
@@ -525,7 +550,6 @@ h1:hover {
   background-color: var(--zain-color);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0px 8px 8px rgb(255, 242, 242);
   margin:20px;
   img {
     width: 100%;
@@ -538,6 +562,11 @@ h1:hover {
   p {
     font-family: 'Times New Roman', Times, serif;
   }
+}
+
+.cardter:hover {
+  box-shadow: 0px 8px 8px rgb(255, 242, 242);
+  transition: .5s;
 }
 
 .card-content{
@@ -555,10 +584,10 @@ h1:hover {
 .card-content .btn{
   display: inline-block;
   padding: 4px 8px;
-  background-color: rgb(255, 0, 0);
+  background-color: var(--farhan-color);
   text-decoration: none;
   border-radius: 25px;
-  color: rgb(0, 0, 0);
+  color: white;
 }
 div.card-container {
   margin: 0px;
@@ -566,6 +595,7 @@ div.card-container {
   box-sizing: border-box;
   font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: #081b29;
+
 }
 
 .btn {
@@ -638,6 +668,93 @@ div.card-container {
 .services-box p {
   font-size: 1.6rem;
   margin: 1rem 0 3rem;
+}
+
+.contact {
+  padding: 2em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 3rem;
+  background-color: var(--farhan-color);
+}
+
+.contact-form form{
+  position: relative;
+  background-color: #081b29;
+} 
+
+.contact-form form input,form textarea{
+
+  border: none;
+  outline: none;
+  width: 90%;
+  padding: 18px;
+  background: #8e979a;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.contact-form textarea{
+  resize: none;
+  height: 220px;
+}
+
+.contact-form form .send{
+  display: inline-block;
+  padding: 14px 60px;
+  background: #00abf0;
+  border-radius: 40px;
+  font-size: 1px;
+  color: aliceblue;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slidetop 1s ease forwards ;
+  animation-delay: 2s;
+  box-shadow: 0 0 5px blue, 0 0 25px lightblue;
+}
+
+.contact-text h2 {
+  font-size: 90px;
+  line-height: 1;
+  text-align: center;
+  color: #00abf0;
+} 
+
+.contact-text h2:hover {
+  text-shadow: 3px 3px 3px white;
+  transition: all .5s;
+}
+
+.contact-text h4{
+  margin: 15px 0;
+  color: aliceblue;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.contact-text p{
+  color: aliceblue;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 2rem;
+}
+
+.contact-list {
+  margin-bottom: 10px;
+} li {
+  margin-bottom: 10px;
+  display: block;
+  i {
+    color: var(--zain-color);
+    font-size: 15px;
+    text-shadow: 0px 0px 3px blanchedalmond;
+  }
 }
 
  /*KEYFRAMES ANIMATION */

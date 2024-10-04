@@ -18,7 +18,9 @@ body {
   padding: 4px;
   width: auto;
   background-color: var(--zain-color);
+  transition: 0.5s;
   border-radius: 1em;
+  box-shadow: 3px 3px 3px white;
 }
 .container h1 {
   text-align: center;
@@ -38,6 +40,7 @@ body {
 
 .btn:hover {
   background-color: var(--farrel-color);
+  transition: all 0.5s;
 }
 
 .dropdown-menu.show {
@@ -67,6 +70,7 @@ input {
 
 input:hover {
   background-color: var(--zain-color);
+  transition: 0.5s;
 }
 
 input[type=checkbox] {
