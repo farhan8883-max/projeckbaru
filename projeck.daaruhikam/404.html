@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>404 - Page Not Found with Key Generation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/404.css">
+</head>
+<body>
+        <div class="container">
+            <h1 class="error-title">404</h1>
+            <p class="error-subtitle">Page Not Found</p>
+            <p>Oops! The page you're looking for doesn't exist.</p>
+            <p>Error Key: <span id="error-key"></span></p>
+    
+            <div class="buttons">
+                <a href="/" class="btn">Go Home</a>
+                <button class="btn" id="copy-btn">Copy Error</button>
+            </div>
+        </div>
+    
+        <div class="notification" id="notification">
+            <button class="close-btn" id="close-btn">×</button>
+            <span>Successfully copied the error.</span>
+        </div>
+    </canvas>
+    
+
+    <script src="apple.js"></script>
+    <script>
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+    
+        // Set canvas full screen
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    
+        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        const fontSize = 16;
+        const columns = canvas.width / fontSize; // Number of columns for the rain
+        const drops = Array(Math.floor(columns)).fill(1); // Initial positions for the drops
+    
+        function drawMatrix() {
+          // Darken the background a little every frame
+          ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+          // Set text color to green and font size
+          ctx.fillStyle = '#0F0';
+          ctx.font = fontSize + 'px monospace';
+    
+          // Loop over the drops array and draw the rain
+          for (let i = 0; i < drops.length; i++) {
+            const text = letters[Math.floor(Math.random() * letters.length)];
+            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+    
+            // Send the drop back to the top randomly after it has crossed the screen
+            // Also, create a random effect by resetting some drops to 1 after they fall
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+              drops[i] = 0;
+            }
+    
+            // Increment the drop's y position
+            drops[i]++;
+          }
+        }
+    
+        setInterval(drawMatrix, 50);
+    
+        // Resize canvas if window size changes
+        window.addEventListener('resize', () => {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+        });
+      </script>
+</body>
+</html>         
